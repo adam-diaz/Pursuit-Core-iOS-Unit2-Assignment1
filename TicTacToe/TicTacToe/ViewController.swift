@@ -10,11 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
+    @IBOutlet weak var playerTurns: UILabel!
+    
+    @IBOutlet var buttons: [GameButton]!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
 
 
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func playAgain(_ sender: Any) {
+    }
 }
 
