@@ -9,5 +9,5 @@
 import Foundation
 
 class TicTacToeBrain {
-  
+    var ticTacBoard: [Double] = [ 0.0 , ]
 }
