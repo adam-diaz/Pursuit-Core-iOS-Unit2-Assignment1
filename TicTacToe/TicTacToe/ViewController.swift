@@ -44,17 +44,21 @@ class ViewController: UIViewController {
                 game.board[0][0] = 0
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 game.playerTwo[0][0] = 0
                 game.board[0][0] = 0
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
+
             }
             gameButton.isEnabled = false
         case 1:
@@ -65,9 +69,10 @@ class ViewController: UIViewController {
                 game.board[0][1] = 1
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                
@@ -75,8 +80,10 @@ class ViewController: UIViewController {
                 game.board[0][1] = 1
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 2:
@@ -87,9 +94,10 @@ class ViewController: UIViewController {
                 game.board[0][2] = 2
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -97,8 +105,10 @@ class ViewController: UIViewController {
                 game.board[0][2] = 2
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 3:
@@ -109,9 +119,10 @@ class ViewController: UIViewController {
                 game.board[1][0] = 3
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -119,8 +130,10 @@ class ViewController: UIViewController {
                 game.board[1][0] = 3
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 4:
@@ -131,9 +144,10 @@ class ViewController: UIViewController {
                 game.board[1][1] = 4
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -141,8 +155,10 @@ class ViewController: UIViewController {
                 game.board[1][1] = 4
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
            gameButton.isEnabled = false
         case 5:
@@ -153,9 +169,10 @@ class ViewController: UIViewController {
                 game.board[1][2] = 5
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -163,8 +180,10 @@ class ViewController: UIViewController {
                 game.board[1][2] = 5
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 6:
@@ -175,9 +194,10 @@ class ViewController: UIViewController {
                 game.board[2][0] = 6
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPO()
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -185,10 +205,12 @@ class ViewController: UIViewController {
                 game.board[2][0] = 6
                 game.turns += 1
                 gameTurnCheck()
+                game.gameWinCheckPT()
                 print("board: \(game.board)")
                 
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 7:
@@ -199,11 +221,11 @@ class ViewController: UIViewController {
                 game.board[2][1] = 7
                 game.turns += 1
                 gameTurnCheck()
-                print("playerOne: \(game.playerOne)")
-                print("board: \(game.board)")
+                game.gameWinCheckPO()
+                
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -211,10 +233,11 @@ class ViewController: UIViewController {
                 game.board[2][1] = 7
                 game.turns += 1
                 gameTurnCheck()
-                print("playerOne: \(game.playerTwo)")
-                print("board: \(game.board)")
+                game.gameWinCheckPT()
+                
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         case 8:
@@ -225,11 +248,11 @@ class ViewController: UIViewController {
                 game.board[2][2] = 8
                 game.turns += 1
                 gameTurnCheck()
-                print("playerTwo: \(game.playerOne)")
-                print("board: \(game.board)")
+                game.gameWinCheckPO()
+               
                 playerTurns.text = "Player Two's Turn"
                 player = 2
-                
+                print("One: \(game.playerOne)")
                 } else {
                     gameButton.setBackgroundImage(UIImage(systemName: "pencil.slash"), for:.normal)
                 
@@ -237,16 +260,17 @@ class ViewController: UIViewController {
                 game.board[2][2] = 8
                 game.turns += 1
                 gameTurnCheck()
-                print("playerTwo: \(game.playerTwo)")
-                print("board: \(game.board)")
+                game.gameWinCheckPT()
                 playerTurns.text = "Player One's Turn"
                     player = 1
+                print("Two: \(game.playerTwo)")
             }
             gameButton.isEnabled = false
         default:
             winOrLose.text = "please play the game."
             
         }
+//        game.gameWinCheckPO()
     }
 
    
@@ -277,15 +301,15 @@ class ViewController: UIViewController {
         
         game.turns = 0
         
-        game.board = [[0,0,0],
+        game.board = [[1,0,0],
                       [0,0,0],
                       [0,0,0]]
         
-        game.playerOne = [[0,0,0],
+        game.playerOne = [[1,0,0],
                           [0,0,0],
                           [0,0,0]]
         
-        game.playerTwo = [[0,0,0],
+        game.playerTwo = [[1,0,0],
                           [0,0,0],
                           [0,0,0]]
         player = 1
